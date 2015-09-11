@@ -1,0 +1,17 @@
+<!-- app/views/users/show.html.erb -->
+
+<p>
+  <h2>Welcome!</h2>
+</p>
+
+<p>
+  <h4><%="You're logged in as #{session[:email]}, and your user id is #{session[:user_id]}"%></h4>
+
+  <div id="flash_messages">
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, :class => "flash #{key}") %>
+  <% end %>
+  </div>
+</p>
+
+<%= render "users_show" %>

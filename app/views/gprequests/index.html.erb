@@ -1,0 +1,37 @@
+<%# app/views/gprequests/index.html.erb %>
+
+<%= render "gprequests_index" %>
+
+<h2>
+  <%= "Open Requests" %>
+</h2>
+<% if @gprequests.count > 0 %>
+  <% if @allow_vote %>
+    <% @gprequests.each do | gprequest | %>
+        <% vote_count = vote_count(gprequest) %>
+    <tr>
+      <td><%= "Request ID: #{gprequest.id}; " %>
+      <td><%= "Title: '#{gprequest.title}'; " %></td>
+      <td><%= "Description: '#{gprequest.description}' - " %></td>
+      <td><%= "has #{vote_count} votes" %><td>
+      <td><%=  button_to 'Vote for this request', user_vote_path(id: gprequest.id) %></td>    
+    </tr>
+    <% end %>
+  <% end %>
+  <% if !@allow_vote %>
+    <%= "(You have already voted)" %>
+    <% @gprequests.each do | gprequest | %>
+      <p>
+      <tr>
+        <td><%= "Request ID: #{gprequest.id}; " %>
+        <td><%= "Title: '#{gprequest.title}'; " %></td>
+        <td><%= "Description: '#{gprequest.description}' - " %></td>
+        <td><%= "has #{gprequest.votes.count} votes" %><td>    
+      </tr>
+      </p>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= "There are no open requests" %>
+<% end %>
+

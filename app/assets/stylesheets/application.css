@@ -1,0 +1,30 @@
+/* ==> gp-request-app/app/assets/stylesheets/application.css */
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+
+body {
+  background-color: #CCCCCC;
+  font-family: Arial;
+  top-margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+  top-margin: 20px;
+}
+
+#home_page {
+  margin-top: 20px;
+}
+
+.home_h3 {
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.home_links {
+  font-family: Arial;
+}
+

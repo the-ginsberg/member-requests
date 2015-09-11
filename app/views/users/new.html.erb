@@ -1,0 +1,25 @@
+<!-- app/views/users/new.html.erb -->
+
+
+<%= render "home" %>
+
+<h1>Sign Up</h1>
+
+<div class="new_user">
+  <%=form_for User.new do |f| %>
+
+    <%=f.label :email %>
+    <%=f.text_field :email, :autofocus => true %>
+
+   <%=f.label :password %>
+   <%=f.password_field :password %>
+
+   <%=f.label :password_confirmation, "Confirm Password" %>
+   <%=f.password_field :password_confirmation %>
+
+   <span id="sign_up">
+     <%=f.submit "Sign Up!" %>
+   </span>
+
+  <% end %>
+</div>
