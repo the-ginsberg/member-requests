@@ -1,7 +1,5 @@
 /* ==> member-requests/app/assets/stylesheets/application.css */
 
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
-
 body {
   background-color: #white;
   font-family: Verdana;
@@ -10,7 +8,7 @@ body {
 }
 .home_page {
   position: fixed;
-  top: 30%;
+  top: 40%;
   left: 35%;
   margin-top: -50px;
   margin-left: -100px;
@@ -19,17 +17,45 @@ body {
   display: inline-block;
   font-size: 32px;
   font-style: italic;
-  margin: 40px 0px 40px;
+  margin: 0px 0px 20px;
 }
 .home_links {
-  font-size: 22px;
+  font-size: 20px;
 }
+.login_page {
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+.login_h2 {
+  display: inline-block;
+  font-size: 32px;
+  font-style: italic;
+  margin: 0px 0px 40px;
+}
+/*
+.login_form label {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  margin-left: 7px;
+  }
+.login_form input {
+  padding: 4px;
+  margin-right: 10px;
+  margin-left: 3px;
+  background: rgba(255,255,255,0.5);
+  }
 .login input {
-  /* padding: 4px; */
+  padding: 4px;
   border: 1px solid # !important;
   margin-right: 5px;
   margin-left: 3px;
   background: rgba(255,255,255,0.5);
-}
+} */
 
 

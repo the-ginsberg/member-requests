@@ -1,5 +1,6 @@
 /* ==> member-requests/app/assets/stylesheets/sessions.css */
 
+/*
 .login_page {
   position: fixed;
   top: 30%;
@@ -7,13 +8,13 @@
   margin-top: -50px;
   margin-left: -100px;
 }
-.login_h2 {
-	display: inline-block;
+.login_page .login_h2 {
+  display: inline-block;
   font-size: 32px;
   font-style: italic;
   margin: 40px 0px 40px;
 }
-.login label {
+.login_form label {
 	font-size: 15px;
 	font-weight: bold;
   font-family: Arial;
@@ -21,13 +22,13 @@
 	margin-bottom: 6px;
   margin-left: 7px;
   }
-.login input {
+.login_form input {
   padding: 4px;
-  margin-right: 5px;
+  margin-right: 10px;
   margin-left: 3px;
   background: rgba(255,255,255,0.5);
   }
-
+*/
 
 
 

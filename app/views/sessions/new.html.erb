@@ -4,15 +4,37 @@
     <h2 class="login_h2">
       Log In
     </h2>
+
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="email" class="form-control" id="password">
+      </div>
     
-    <div class="login_form">
-      <%= form_tag login_path %>
-      <%= label_tag :email %>
-      <%= text_field_tag :email %>
-
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
-
-      <%= submit_tag "Log in" %>
-    </div>
+      <button type="submit" class="btn btn-default">Log In</button>
+    </form>
   </div>
+
+    <!--
+    <form action="demo_form.asp">
+      Email: <input type="text" name="email" size="35"><br>
+      PIN: <input type="text" name="password" maxlength="4" size="4"><br>
+      <input type="submit" value="Submit">
+    </form>
+    -->
+    <!--
+    <div class="login_form">
+      <%#= form_tag login_path %>
+      <%#= label_tag :email %>
+      <%#= text_field_tag :email %>
+
+      <%#= label_tag :password %>
+      <%#= password_field_tag :password %>
+
+      <%#= submit_tag "Log in" %>
+    </div>
+    -->
