@@ -1,17 +1,18 @@
 <!-- app/views/sessions/new.html.erb -->
 
-  <%= render "/users/home" %>
+  <div class="login_page">
+    <h2 class="login_h2">
+      Log In
+    </h2>
+    
+    <div class="login_form">
+      <%= form_tag login_path %>
+      <%= label_tag :email %>
+      <%= text_field_tag :email %>
 
-  <h1>Log In</h1>
-  
-  <div class="login">
-  <%= form_tag login_path %>
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
 
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-
-    <%= submit_tag "Log in" %>
+      <%= submit_tag "Log in" %>
+    </div>
   </div>
-  <end>
