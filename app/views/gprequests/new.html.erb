@@ -1,16 +1,20 @@
 <!-- app/views/gprequests/new.html.erb -->
 
-<h1>Post A New Request</h1>
-
-<%= "(Current User ID: #{session[:user_id]})" %>
-<br></br>
-
-<%= form_for @gprequest do |f| %>
-  <%= f.hidden_field :user_id, :value => session[:user_id] %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.submit "Post" %>
-<% end %>
+<div class="container">
+  <div class="post_page">
+    <h3>
+      POST A NEW REQUEST
+    </h3>
+    <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+    <br></br>
+    <%= form_for @gprequest do |f| %>
+      <%= f.hidden_field :user_id, :value => session[:user_id] %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+      <%= f.submit "Post" %>
+    <% end %>
+  </div>
+</div>
 

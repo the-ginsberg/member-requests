@@ -1,7 +1,9 @@
 /* ==> member-requests/app/assets/stylesheets/application.css */
+*= require_self
+*= require_tree .
 
 body {
-  background-color: #white;
+  background-color: white;
   font-family: Verdana;
   color: black;
   text-align: center;
@@ -21,7 +23,7 @@ body {
   margin-top: -50px;
   margin-left: -100px;
 }
-.home_h3 {
+.home_page h3 {
   display: inline-block;
   font-size: 32px;
   font-style: italic;
@@ -30,6 +32,7 @@ body {
 .home_links {
   font-size: 20px;
 }
+*/
 .login_page {
   position: fixed;
   top: 25%;
@@ -37,7 +40,7 @@ body {
   margin-top: -50px;
   margin-left: -100px;
 }
-.login_h2 {
+.login_page h2 {
   display: inline-block;
   font-size: 32px;
   font-style: italic;
@@ -50,9 +53,44 @@ body {
   margin-top: -50px;
   margin-left: -100px;
 }
-.signup_h2 {
+.signup_page h2 {
   display: inline-block;
   font-size: 32px;
   font-style: italic;
   margin: 0px 0px 40px;
 }
+.user_page {
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+.user_page h2 {
+  display: inline-block;
+  font-size: 28px;
+  font-style: italic;
+  margin: 0px 0px 40px;
+}
+.post_page {
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+.post_page h3 {
+  display: inline-block;
+  font-size: 28px;
+  font-style: italic;
+  margin: 0px 0px 40px;
+}
+
+
+
+
+
+
+
+
+

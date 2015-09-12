@@ -1,16 +1,21 @@
 <!-- app/views/gprequests/show.html.erb -->
 
-<h4>
-  <%= "Your Requests: (#{session[:email]}, user ID #{session[:user_id]})" %>
-</h4>
-
-<% if @gprequests.count > 0 %>
-  <% @gprequests.each do |gprequest| %>
-    <p>
-    <% vote_count = vote_count(gprequest) %>
-    <%= "Request ID: #{gprequest.id}, title: '#{gprequest.title}', description: '#{gprequest.description}', (#{vote_count} votes)" %>
-    </p>
-  <% end %>
-<% else %>
-  <%= "You have no open requests" %>
-<% end %>
+<div class="container">
+  <div class="your_req_page">
+    <h3>
+      YOUR REQUESTS
+    </h3>
+    <%= "Email: #{session[:email]} User ID: #{session[:user_id]}" %>
+    <br></br>
+    <% if @gprequests.count > 0 %>
+      <% @gprequests.each do |gprequest| %>
+        <p>
+        <% vote_count = vote_count(gprequest) %>
+        <%= "Request ID: #{gprequest.id}, title: '#{gprequest.title}', description: '#{gprequest.description}', (#{vote_count} votes)" %>
+        </p>
+      <% end %>
+    <% else %>
+      <%= "You have no open requests" %>
+    <% end %>
+  </div>
+</div>
