@@ -1,12 +1,15 @@
+<!-- app/views/gprequests/rank.html.erb -->
 
-<%= render "gprequests_rank" %>
+<h2>Open Requests By Votes</h2>
 
-<h2>Request Ranking By Votes</h2>
-
-<% @gprequest_rank.each do |request| %>
-  <% request_id = request[0] %>
-  <% gprequest = Gprequest.find(request_id) %>
-  <%= "(id:#{request_id}) | title:  '#{gprequest.title}' | descr:  '#{gprequest.description}' | votes: #{request[1]}" %>
-  <br></br>
+<% if @gprequests.count > 0 %>
+  <% @gprequest_rank.each do |request| %>
+    <% request_id = request[0] %>
+    <% gprequest = Gprequest.find(request_id) %>
+    <%= "(id:#{request_id}) | title:  '#{gprequest.title}' | descr:  '#{gprequest.description}' | votes: #{request[1]}" %>
+    <br></br>
+  <% end %>
+<% else %>
+    <%= "There are no open requests" %>
 <% end %>
 
